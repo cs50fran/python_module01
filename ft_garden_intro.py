@@ -10,7 +10,7 @@ def main():
 	plant: str = "Morango"
 	height: str = "50cm"
 	age: str=  "30 days"
-	ft_garden_intro(plant, height, name)
+	ft_garden_intro(plant, height, age)
 
 if __name__ == "__main__":
 	main()
