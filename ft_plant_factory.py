@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
 class Plant:
+    number_of_plants = 0
+
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name: str = name
         self.height: int = height
         self.age: int = age
+        Plant.number_of_plants += 1
 
 
 def ft_garden_data() -> list:
@@ -19,12 +22,10 @@ def ft_garden_data() -> list:
 
 
 def ft_plant_factory(plants: list):
-    count = 0
     print("=== Plant Factory Output ===")
     for i in plants:
         print(f"Created: {i.name} ({i.height}cm, {i.age} days)")
-        count += 1
-    print(f"\nTotal plants created: {count}")
+    print(f"\nTotal plants created: {Plant.number_of_plants}")
 
 
 def main():
